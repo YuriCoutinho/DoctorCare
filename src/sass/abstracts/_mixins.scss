@@ -1,0 +1,16 @@
+@use "../abstracts/colors";
+
+@mixin title($fontSize, $marginBottom: 0) {
+  font-size: $fontSize;
+  font-family: DM Sans;
+  font-weight: 700;
+  color: colors.$gray;
+  margin-bottom: $marginBottom;
+}
+
+@mixin section-flex($flexDirection: column) {
+  display: flex;
+  flex-direction: $flexDirection;
+  align-items: center;
+  justify-content: center;
+}

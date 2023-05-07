@@ -1,0 +1,16 @@
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
+
+.btn {
+  @include mixins.section-flex(row);
+  padding: 16px 32px;
+  background-color: colors.$green;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "DM Sans";
+  font-weight: 500;
+  color: colors.$white;
+  border-radius: 40px;
+  margin-bottom: 60px;
+  gap: 12px;
+}

@@ -1,0 +1,42 @@
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
+@use "../abstracts/placeholders";
+
+.services {
+  @include mixins.section-flex;
+  background-color: colors.$green-lightest;
+  padding: 50px 24px;
+  padding-top: 300px;
+  position: relative;
+
+  &__title {
+    @include mixins.title(30px, 24px);
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  background-color: colors.$white;
+  border: 1px solid colors.$green-light;
+  border-radius: 6px;
+  padding: 24px;
+  gap: 16px;
+
+  &__title {
+    @include mixins.title(24px, 16px);
+  }
+
+  &__description {
+    @extend %description;
+  }
+}

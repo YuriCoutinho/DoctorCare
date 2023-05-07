@@ -1,0 +1,32 @@
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
+
+.details {
+  @include mixins.section-flex;
+}
+
+.details-list {
+  @include mixins.section-flex;
+  width: 80%;
+  gap: 60px;
+  position: absolute;
+  z-index: 1;
+  background-color: colors.$beige;
+  padding: 40px 0;
+  border: 1px solid colors.$green-light;
+  border-radius: 6px;
+}
+
+.detail-text {
+  @include mixins.section-flex;
+  gap: 16px;
+  text-align: center;
+
+  &__title {
+    @include mixins.title(48px, 0);
+  }
+
+  &__description {
+    color: colors.$green;
+  }
+}

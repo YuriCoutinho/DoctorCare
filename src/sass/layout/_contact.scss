@@ -1,0 +1,28 @@
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
+@use "../abstracts/placeholders";
+
+.contact {
+  @include mixins.section-flex;
+  padding: 50px 24px 100px 24px;
+  background-color: colors.$white;
+  &__title {
+    @include mixins.title(30px, 32px);
+  }
+  &__button {
+    align-self: flex-start;
+    margin-top: 32px;
+  }
+}
+
+.contact-list {
+  align-self: flex-start;
+  &__item {
+    display: flex;
+    gap: 8px;
+    @extend %description;
+    &:first-child {
+      margin-bottom: 16px;
+    }
+  }
+}

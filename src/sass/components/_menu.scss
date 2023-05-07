@@ -1,0 +1,11 @@
+@use "../abstracts/colors";
+
+.menu-icon {
+  fill: none;
+  stroke: colors.$green;
+}
+
+.menu-icon--inverted {
+  fill: none;
+  stroke: colors.$green-light;
+}

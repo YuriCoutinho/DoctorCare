@@ -1,0 +1,29 @@
+@use "../abstracts/colors";
+@use "../abstracts//mixins";
+@use "../abstracts/placeholders";
+
+.footer {
+  @include mixins.section-flex;
+  align-items: flex-start;
+  background-color: colors.$green;
+  padding: 60px 24px;
+  color: colors.$white;
+
+  &__title {
+    @include mixins.title(34px, 24px);
+    font-weight: 400;
+    color: colors.$white;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+}
+
+.nav-list {
+  @include mixins.section-flex(row);
+  gap: 32px;
+}

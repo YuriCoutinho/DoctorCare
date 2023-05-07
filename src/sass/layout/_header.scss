@@ -1,0 +1,45 @@
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background-color: colors.$green-light;
+  color: colors.$gray;
+  padding: 16px;
+
+  &--inverted {
+    background-color: colors.$green;
+  }
+
+  &__title {
+    @include mixins.title(20px);
+    font-weight: 400;
+
+    span {
+      color: colors.$green;
+    }
+
+    &--inverted {
+      color: colors.$white;
+
+      span {
+        color: colors.$white;
+      }
+    }
+  }
+
+  &__button {
+    background-color: var(--green-light);
+
+    &--inverted {
+      background-color: var(--green);
+      filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(225deg)
+        brightness(150%) contrast(100%);
+    }
+  }
+}

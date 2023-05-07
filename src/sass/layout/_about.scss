@@ -1,0 +1,18 @@
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
+@use "../abstracts/placeholders";
+
+.about {
+  @include mixins.section-flex;
+  background-color: colors.$beige;
+  padding: 50px 24px;
+
+  &__title {
+    @include mixins.title(30px, 24px);
+  }
+
+  &__description {
+    @extend %description;
+    margin-bottom: 60px;
+  }
+}
