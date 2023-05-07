@@ -1,6 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   context: path.join(__dirname, "src"),
@@ -10,7 +12,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name][fullHash].js",
+    filename: "[name][fullhash].js",
     clean: true,
   },
   plugins: [
@@ -20,7 +22,13 @@ module.exports = {
       filename: "index.html",
       hash: true,
     }),
-    new MiniCssExtractPlugin({ filename: "style.css" }),
+    new MiniCssExtractPlugin({ filename: "main.css" }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "./assets/images", to: "./assets/images" },
+        { from: "./assets/icons", to: "./assets/icons" },
+      ],
+    }),
   ],
   module: {
     rules: [
@@ -30,7 +38,6 @@ module.exports = {
       },
       {
         test: /\.(?:js|mjs|cjs)$/,
-        include: path.resolve(__dirname, "src"), // include path optimizes performance
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -47,6 +54,13 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: "asset/resource",
       },
+    ],
+  },
+  optimization: {
+    minimizer: [
+      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`)
+      `...`,
+      new CssMinimizerPlugin(),
     ],
   },
 };
