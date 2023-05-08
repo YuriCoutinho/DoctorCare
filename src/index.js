@@ -1,17 +1,41 @@
 import css from "./sass/main.scss";
-const introduction = document.querySelector(".introduction");
+const body = document.querySelector("body");
 const header = document.querySelector(".header");
 const headerTitle = document.querySelector(".header__title");
+const headerButton = document.querySelector(".header__button");
+const headerMenuIcon = document.querySelector(".header-icon");
+const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menu-nav__item");
 
-window.addEventListener("scroll", () => {
-  let introductionPosition = introduction.getBoundingClientRect().top;
-  if (introductionPosition != 0) {
-    header.classList.add("header--inverted");
-    headerTitle.classList.add("header__title--inverted");
-    headerButton.classList.add("header__button--inverted");
+const whatsappButtons = document.querySelectorAll(".btn");
+
+const toggleMenu = () => {
+  header.classList.toggle("header--inverted");
+  headerTitle.classList.toggle("header__title--inverted");
+  headerButton.classList.toggle("header__button--inverted");
+  menu.classList.toggle("menu--active");
+  headerMenuIcon.classList.toggle("header-icon--active");
+
+  if (body.style.overflow == "hidden") {
+    body.style.overflow = "scroll";
   } else {
-    header.classList.remove("header--inverted");
-    headerTitle.classList.remove("header__title--inverted");
-    headerButton.classList.remove("header__button--inverted");
+    body.style.overflow = "hidden";
   }
+};
+
+headerButton.addEventListener("click", () => {
+  toggleMenu();
+});
+
+menuItems.forEach((e) => {
+  e.addEventListener("click", () => {
+    toggleMenu();
+  });
+});
+
+whatsappButtons.forEach((e) => {
+  e.addEventListener("click", () => {
+    const wppText = "Hi! Glad you're here! The DoctorCare uses a fake number! If you want, clone the project and use a real number to test!"
+    window.location.href = `https://api.whatsapp.com/send/?phone=5521XXXXXXXXX&text=${wppText}`;
+  });
 });

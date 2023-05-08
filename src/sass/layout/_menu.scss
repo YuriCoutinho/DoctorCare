@@ -1,0 +1,40 @@
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
+@use "../abstracts/placeholders";
+
+.menu {
+  @include mixins.section-flex();
+  top: 74px;
+  width: 100%;
+  color: colors.$white;
+  background-color: colors.$white;
+  padding: 0 24px;
+  position: absolute;
+  z-index: 2;
+  height: 0;
+  visibility: hidden;
+  overflow-y: hidden;
+  transition: .5s;
+  
+  &--active {
+    height:  100vh;
+    visibility: visible;
+    background-color: colors.$green;
+  }
+
+  &__button {
+    margin-bottom: 80px;
+  }
+}
+
+.menu-nav {
+  @include mixins.section-flex();
+  gap: 48px;
+  margin-bottom: 48px;
+
+  &__item {
+    @include mixins.title(24px);
+    color: colors.$white;
+  }
+}
+

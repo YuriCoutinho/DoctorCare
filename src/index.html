@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,253 +10,262 @@
     <header class="header">
       <h1 class="header__title">Doctor<span>Care</span></h1>
       <button class="header__button">
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          xmlns="http://www.w3.org/2000/svg"
-          class="menu-icon"
-        >
-          <path
-            d="M10 20H30"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M10 12H30"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M18 28L30 28"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+        <div class="header-icon"></div>
       </button>
     </header>
 
-    <section class="introduction">
-      <h2 class="introduction__title">
-        Assistência médica simplificada para todos
-      </h2>
-      <p class="introduction__description">
-        Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz
-        de sua doença e proporcionar uma cura a longo prazo.
-      </p>
-      <button class="btn">
-        <img src="./assets/icons/whatsapp.svg" alt="whatsapp" />
-        Agende Sua Consulta
-      </button>
-      <div class="image-container">
-        <img
-          src="./assets/images/introduction.png"
-          alt="Mulher adulta com as duas mãos abertas no peito "
-          width="260"
-          height="340"
-        />
-      </div>
-    </section>
+    <section class="menu">
+      <nav>
+        <ul class="menu-nav">
+          <li class="menu-nav__item">
+            <a href="#home">Home</a>
+          </li>
+          <li class="menu-nav__item"><a href="#about">About Us</a></li>
+          <li class="menu-nav__item"><a href="#services">Services</a></li>
+          <li class="menu-nav__item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-    <section class="details">
-      <ul class="details-list">
+      <button class="btn btn--inverted">Schedule Your Consultation</button>
+
+      <ul class="nav-list">
         <li>
-          <p class="detail-text">
-            <span class="detail-text__title">+3.500</span>
-            <span class="detail-text__description">Pacientes Atendidos</span>
-          </p>
+         <a href="#"><img src="./assets/icons/instagram.svg" alt="Instagram Icon" /></a>
         </li>
         <li>
-          <p class="detail-text">
-            <span class="detail-text__title">+15</span>
-            <span class="detail-text__description"
-              >Especialistas Disponíveis</span
-            >
-          </p>
+          <a href="#"></a><img src="./assets/icons/facebook.svg" alt="Facebook Icon" /></a>
         </li>
         <li>
-          <p class="detail-text">
-            <span class="detail-text__title">+10</span>
-            <span class="detail-text__description">Anos no mercado</span>
-          </p>
+          <a href="#"></a><img src="./assets/icons/youtube.svg" alt="Youtube Icon" /></a>
         </li>
       </ul>
     </section>
 
-    <section class="services">
-      <h2 class="services__title">Serviços</h2>
-      <ul class="services__list">
-        <li>
-          <section class="service">
+    <main>
+      <article id="home">
+        <section class="introduction">
+          <h2 class="introduction__title">
+            Simplified healthcare for everyone
+          </h2>
+          <p class="introduction__description">
+            DoctorCare doctors go beyond the symptoms to treat the root cause of
+            your illness and provide a long-term cure.
+          </p>
+          <button class="btn">
+            <img src="./assets/icons/whatsapp.svg" alt="whatsapp" />
+            Schedule Your Consultation
+          </button>
+          <div class="image-container">
             <img
-              src="./assets/icons/check.svg"
-              alt="ícone de verificação"
-              height="24"
-              width="24"
+              src="./assets/images/introduction.png"
+              alt="Adult woman with both hands open on her chest."
+              width="260"
+              height="340"
             />
-            <h3 class="service__title">Problemas digestivos</h3>
-            <p class="service__description">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim.
-            </p>
-          </section>
-        </li>
+          </div>
+        </section>
 
-        <li>
-          <section class="service">
-            <img
-              src="./assets/icons/check.svg"
-              alt="ícone de verificação"
-              height="24"
-              width="24"
-            />
-            <h3 class="service__title">Saúde Hormonal</h3>
-            <p class="service__description">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim.
-            </p>
-          </section>
-        </li>
+        <section class="details">
+          <ul class="details-list">
+            <li>
+              <p class="detail-text">
+                <span class="detail-text__title">+3.500</span>
+                <span class="detail-text__description">Attended Patients</span>
+              </p>
+            </li>
+            <li>
+              <p class="detail-text">
+                <span class="detail-text__title">+15</span>
+                <span class="detail-text__description"
+                  >Available Specialists</span
+                >
+              </p>
+            </li>
+            <li>
+              <p class="detail-text">
+                <span class="detail-text__title">+10</span>
+                <span class="detail-text__description"
+                  >Years on the market</span
+                >
+              </p>
+            </li>
+          </ul>
+        </section>
+      </article>
 
-        <li>
-          <section class="service">
-            <img
-              src="./assets/icons/check.svg"
-              alt="ícone de verificação"
-              height="24"
-              width="24"
-            />
-            <h3 class="service__title">Bem Estar Mental</h3>
-            <p class="service__description">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim.
-            </p>
-          </section>
-        </li>
+      <section class="services" id="services">
+        <h2 class="services__title">Services</h2>
+        <ul class="services__list">
+          <li>
+            <section class="service">
+              <img
+                src="./assets/icons/check.svg"
+                alt="Verification Icon"
+                height="24"
+                width="24"
+              />
+              <h3 class="service__title">Digestive Problems</h3>
+              <p class="service__description">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </section>
+          </li>
 
-        <li>
-          <section class="service">
-            <img
-              src="./assets/icons/check.svg"
-              alt="ícone de verificação"
-              height="24"
-              width="24"
-            />
-            <h3 class="service__title">Cuidados Pediatricos</h3>
-            <p class="service__description">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim.
-            </p>
-          </section>
-        </li>
+          <li>
+            <section class="service">
+              <img
+                src="./assets/icons/check.svg"
+                alt="Verification Icon"
+                height="24"
+                width="24"
+              />
+              <h3 class="service__title">Hormonal Health</h3>
+              <p class="service__description">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </section>
+          </li>
 
-        <li>
-          <section class="service">
-            <img
-              src="./assets/icons/check.svg"
-              alt="ícone de verificação"
-              height="24"
-              width="24"
-            />
-            <h3 class="service__title">Autoimune e Inflamação</h3>
-            <p class="service__description">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim.
-            </p>
-          </section>
-        </li>
+          <li>
+            <section class="service">
+              <img
+                src="./assets/icons/check.svg"
+                alt="Verification Icon"
+                height="24"
+                width="24"
+              />
+              <h3 class="service__title">Mental Health</h3>
+              <p class="service__description">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </section>
+          </li>
 
-        <li>
-          <section class="service">
-            <img
-              src="./assets/icons/check.svg"
-              alt="ícone de verificação"
-              height="24"
-              width="24"
-            />
-            <h3 class="service__title">Saúde do Coração</h3>
-            <p class="service__description">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim.
-            </p>
-          </section>
-        </li>
-      </ul>
-    </section>
+          <li>
+            <section class="service">
+              <img
+                src="./assets/icons/check.svg"
+                alt="Verification Icon"
+                height="24"
+                width="24"
+              />
+              <h3 class="service__title">Pediatric Care</h3>
+              <p class="service__description">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </section>
+          </li>
 
-    <section class="about">
-      <h2 class="about__title">Entenda quem somos e por que existimos</h2>
-      <p class="about__description">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim. Amet minim mollit non deserunt
-        ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
-        enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-        amet sint. Velit officia consequat duis enim. Amet minim mollit non
-        deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-        consequat duis enim. Amet minim mollit non deserunt ullamco est sit
-        aliqua dolor do amet sint.
-      </p>
-      <div class="image-container">
-        <img
-          src="./assets/images/about.png"
-          width="327"
-          height="282"
-          alt="Médico, em pé em seu consultorio, ao lado de uma mulher adulta e uma criança sorrindo."
-        />
-      </div>
-    </section>
+          <li>
+            <section class="service">
+              <img
+                src="./assets/icons/check.svg"
+                alt="Verification Icon"
+                height="24"
+                width="24"
+              />
+              <h3 class="service__title">Autoimmune and Inflammation</h3>
+              <p class="service__description">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </section>
+          </li>
 
-    <section class="contact">
-      <h2 class="contact__title">Entre em contato com a gente!</h2>
-      <ul class="contact-list">
-        <li class="contact-list__item">
-          <img src="./assets/icons/map-pin.svg" alt="" />R. Amauri Souza, 346
-        </li>
-        <li class="contact-list__item">
-          <img src="./assets/icons/mail.svg" alt="" />contato@doctorcare.com
-        </li>
-      </ul>
-      <button class="btn contact__button">
-        <img
-          src="./assets/icons/whatsapp.svg"
-          alt="ícone da empresa whatsapp"
-        />
-        Agende sua consulta
-      </button>
+          <li>
+            <section class="service">
+              <img
+                src="./assets/icons/check.svg"
+                alt="Verification Icon"
+                height="24"
+                width="24"
+              />
+              <h3 class="service__title">Heart Health</h3>
+              <p class="service__description">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim.
+              </p>
+            </section>
+          </li>
+        </ul>
+      </section>
 
-      <div class="image-container">
-        <img
-          src="./assets/images/contact.png"
-          width="324"
-          height="213"
-          alt="Homem sentado em uma cadeira com os braços apoiados na mesa mexendo no celular."
-        />
-      </div>
-    </section>
+      <section class="about" id="about">
+        <h2 class="about__title">Who Are We</h2>
+        <p class="about__description">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim. Amet minim mollit non
+          deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+          consequat duis enim. Amet minim mollit non deserunt ullamco est sit
+          aliqua dolor do amet sint. Velit officia consequat duis enim. Amet
+          minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+          Velit officia consequat duis enim. Amet minim mollit non deserunt
+          ullamco est sit aliqua dolor do amet sint.
+        </p>
+        <div class="image-container">
+          <img
+            src="./assets/images/about.png"
+            width="327"
+            height="282"
+            alt="
+            Doctor, standing in his office, next to an adult woman and a smiling child."
+          />
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h2 class="contact__title">Contact us!</h2>
+        <ul class="contact-list">
+          <li class="contact-list__item">
+            <img src="./assets/icons/map-pin.svg" alt="" />20 E 70th St, New
+            York, NY 10021
+          </li>
+          <li class="contact-list__item">
+            <img src="./assets/icons/mail.svg" alt="" />contact@doctorcare.com
+          </li>
+        </ul>
+        <button class="btn contact__button">
+          <img
+            src="./assets/icons/whatsapp.svg"
+            alt="ícone da empresa whatsapp"
+          />
+          Schedule Your Consultation
+        </button>
+
+        <div class="image-container">
+          <img
+            src="./assets/images/contact.png"
+            width="324"
+            height="213"
+            alt="
+            Man sitting in a chair with his arms resting on the table using his cell phone."
+          />
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
       <h2 class="footer__title">Doctor<span>Care</span></h2>
       <div class="footer__details">
-        <p>©2023 Beautysalon.</p>
-        <p>Todos os direitos reservados.</p>
+        <p>©2023 DoctorCare.</p>
+        <p>All rights reserved.</p>
       </div>
 
-      <nav>
-        <ul class="nav-list">
-          <li>
-            <img src="./assets/icons/instagram.svg" alt="ícone do Instagram" />
-          </li>
-          <li>
-            <img src="./assets/icons/facebook.svg" alt="ícone do Facebook" />
-          </li>
-          <li>
-            <img src="./assets/icons/youtube.svg" alt="ícone do Youtube" />
-          </li>
-        </ul>
-      </nav>
+      <ul class="nav-list">
+        <li>
+          <a href="#"><img src="./assets/icons/instagram.svg" alt="Instagram Icon" /></a>
+         </li>
+         <li>
+           <a href="#"></a><img src="./assets/icons/facebook.svg" alt="Facebook Icon" /></a>
+         </li>
+         <li>
+           <a href="#"></a><img src="./assets/icons/youtube.svg" alt="Youtube Icon" /></a>
+         </li>
+      </ul>
     </footer>
   </body>
 </html>

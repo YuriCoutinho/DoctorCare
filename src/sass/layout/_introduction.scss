@@ -5,7 +5,7 @@
 .introduction {
   @include mixins.section-flex;
   background-color: colors.$green-light;
-  padding: 100px 24px 0;
+  padding: 50px 24px 0;
   padding-bottom: 200px;
 
   &__title {

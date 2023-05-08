@@ -4,7 +4,7 @@
 
 .contact {
   @include mixins.section-flex;
-  padding: 50px 24px 100px 24px;
+  padding: 100px 24px;
   background-color: colors.$white;
   &__title {
     @include mixins.title(30px, 32px);

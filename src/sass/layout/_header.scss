@@ -5,12 +5,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  z-index: 2;
-  width: 100%;
   background-color: colors.$green-light;
   color: colors.$gray;
   padding: 16px;
+  transition: 0.5s;
+  height: 75px;
 
   &--inverted {
     background-color: colors.$green;
@@ -40,6 +39,37 @@
       background-color: var(--green);
       filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(225deg)
         brightness(150%) contrast(100%);
+    }
+  }
+}
+
+.header-icon {
+  border-top: 2px solid colors.$green;
+  width: 20px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: inherit;
+    width: 20px;
+    height: 2px;
+    background: colors.$green;
+    margin-top: 5px;
+    transition: .6s;
+  }
+
+  &--active {
+    border-top: transparent;
+
+    &::before {
+      transform: rotate(135deg);
+    }
+
+    &::after {
+      transform: rotate(-135deg);
+      top: -7px;
     }
   }
 }

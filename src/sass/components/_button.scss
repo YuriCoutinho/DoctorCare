@@ -13,4 +13,9 @@
   border-radius: 40px;
   margin-bottom: 60px;
   gap: 12px;
+
+  &--inverted{
+    background-color: colors.$white;
+    color: colors.$green;
+  }
 }
